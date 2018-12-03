@@ -1,0 +1,35 @@
+.btn,
+.btn-outline
+  @extend %f-mobile-p-0
+  font-weight: 400
+
+  @include breakpoint($tablet)
+    // sass-lint:disable-block space-around-operator
+    @extend %f-mobile-p-0
+
+
+  &_width-1
+    max-width: 270px
+    width: 100%
+
+
+.btn
+  // sass-lint:disable-block force-pseudo-nesting
+  &_green
+    background-color: $green-primary
+    color: $white
+
+    &:hover:not(:disabled)
+      background-color: lighten($green-primary, 10%)
+
+
+.btn-outline
+  // sass-lint:disable-block force-pseudo-nesting nesting-depth
+  &_green
+    border-color: $green-primary
+    color: $green-primary
+
+    &:hover:not(:disabled)
+      background-color: $green-primary
+      border-color: $green-primary
+      color: $white
