@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+html
+  font-size: #{$base + 'px'}
+  font-size: #{$base-font-size + '%'} // sass-lint:disable-line no-duplicate-properties
+  height: 100%
+
+  @include breakpoint($tablet)
+    font-size: #{$base-tablet + 'px'}
+    font-size: #{$base-font-size-tablet + '%'} // sass-lint:disable-line no-duplicate-properties
+
+body
+  @extend %f-mobile-p-0
+  @include font-smooth
+  color: $gray-primary
+  font-family: $font
+  font-weight: 400
+  min-height: 100%
+  min-width: 320px
+  overflow-x: hidden
+  position: relative
+
+  @include breakpoint($tablet)
+    // sass-lint:disable-block space-around-operator
+    @extend %f-tablet-p-0
+
+
+// ----------------------
+// HEADINGS AND PARAGRAPH
+// ----------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-weight: 700
+  margin: 0
+
+p,
+ul,
+ol,
+pre,
+figure
+  margin: 0
+
+a
+  color: inherit
