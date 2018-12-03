@@ -1,0 +1,43 @@
+.footer
+  $bg-color: rgba($gray-primary, .2)
+  background: $gray-tertiary
+  border-top: 1px solid $bg-color
+  padding: shorthand-dms-rem(2 0)
+
+  @include breakpoint($tablet)
+    padding: shorthand-dms-rem(2.5 0, $tablet)
+
+  &__container
+    padding: shorthand-dms-px(0 1)
+    position: relative
+
+    @include breakpoint($tablet)
+      align-items: center
+      display: flex
+      justify-content: space-between
+      padding: shorthand-dms-px(0 2, $tablet)
+
+  &__social
+    margin-bottom: dms-rem(1)
+
+    @include breakpoint($tablet)
+      @include position(absolute, 50% null null 50%)
+      margin-bottom: 0
+      transform: translate(-50%, -50%)
+
+    &-btn
+      margin: shorthand-dms-px(0 .5)
+
+      @include breakpoint($tablet)
+        margin: shorthand-dms-px(0 .5, $tablet)
+
+  &__text
+    @extend %f-mobile-n-2
+    margin-top: dms-rem(.5)
+    text-align: center
+
+    @include breakpoint($tablet)
+      @extend %f-tablet-n-2
+      margin-top: 0
+      max-width: 30%
+      text-align: left
