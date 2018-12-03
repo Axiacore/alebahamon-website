@@ -1,0 +1,25 @@
+# File types
+*.dump
+*.gz
+*.lock
+*.log
+*.mo
+*.pyc
+*.sql
+*.swn
+*.swo
+*.swp
+
+# OS files
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+*~
+
+# Folders
+.coverage
+.sass-cache
+.vscode
+/htmlcov
+/node_modules

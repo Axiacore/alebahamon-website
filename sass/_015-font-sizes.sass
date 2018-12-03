@@ -1,0 +1,129 @@
+$breakpoints-extends: (tablet: $tablet, desktop: $desktop, widescreen: $widescreen, fullhd: $fullhd)
+
+// Used $extend-name when you have multi font style
+// with different font-size or line-height
+@mixin create-extends($font, $position, $extend-name: null)
+  @each $key, $value in $breakpoints-extends
+    @include breakpoint($value)
+      %f-#{$key}-#{$position}-#{$font}#{$extend-name}
+        @content
+
+
+// Mixins Fonts Mobile
+@mixin f-mobile-n-2
+  font-size: ms(-2)
+  line-height: 14px
+
+@mixin f-mobile-n-1
+  font-size: ms(-1)
+  line-height: 15px
+
+@mixin f-mobile-p-0
+  font-size: ms(0)
+  line-height: dms-rem(1)
+
+@mixin f-mobile-p-1
+  font-size: ms(1)
+  line-height: dms-rem(1.2)
+
+@mixin f-mobile-p-2
+  font-size: ms(2)
+  line-height: dms-rem(1.35)
+
+@mixin f-mobile-p-3
+  font-size: ms(3)
+  line-height: dms-rem(1.65)
+
+@mixin f-mobile-p-4
+  font-size: ms(4)
+  line-height: dms-rem(2)
+
+@mixin f-mobile-p-5
+  font-size: ms(5)
+  line-height: dms-rem(2.4)
+
+
+// Format Fonts Mobile
+%f-mobile-n-2
+  @include f-mobile-n-2
+
+%f-mobile-n-1
+  @include f-mobile-n-1
+
+%f-mobile-p-0
+  @include f-mobile-p-0
+
+%f-mobile-p-1
+  @include f-mobile-p-1
+
+%f-mobile-p-2
+  @include f-mobile-p-2
+
+%f-mobile-p-3
+  @include f-mobile-p-3
+
+%f-mobile-p-4
+  @include f-mobile-p-4
+
+%f-mobile-p-5
+  @include f-mobile-p-5
+
+
+// Mixins Fonts Tablet and Above
+@mixin f-tablet-n-2
+  font-size: ms(-2)
+  line-height: 14px
+
+@mixin f-tablet-n-1
+  font-size: ms(-1)
+  line-height: 18px
+
+@mixin f-tablet-p-0
+  font-size: ms(0)
+  line-height: dms-rem(1, $tablet)
+
+@mixin f-tablet-p-1
+  font-size: ms(1)
+  line-height: dms-rem(1.2, $tablet)
+
+@mixin f-tablet-p-2
+  font-size: ms(2)
+  line-height: dms-rem(1.35, $tablet)
+
+@mixin f-tablet-p-3
+  font-size: ms(3)
+  line-height: dms-rem(1.6, $tablet)
+
+@mixin f-tablet-p-4
+  font-size: ms(4)
+  line-height: dms-rem(1.85, $tablet)
+
+@mixin f-tablet-p-5
+  font-size: ms(5)
+  line-height: dms-rem(2, $tablet)
+
+
+// Format Fonts Tablet and Above
+@include create-extends(2, n)
+  @include f-tablet-n-2
+
+@include create-extends(1, n)
+  @include f-tablet-n-1
+
+@include create-extends(0, p)
+  @include f-tablet-p-0
+
+@include create-extends(1, p)
+  @include f-tablet-p-1
+
+@include create-extends(2, p)
+  @include f-tablet-p-2
+
+@include create-extends(3, p)
+  @include f-tablet-p-3
+
+@include create-extends(4, p)
+  @include f-tablet-p-4
+
+@include create-extends(5, p)
+  @include f-tablet-p-5
