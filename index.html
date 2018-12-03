@@ -35,10 +35,139 @@
             <a class="header__logo" href="index.html">
                 <img src="svg/ab-logo.svg" alt="Alejandra Bahamón">
             </a>
-            <a class="btn-outline btn-outline_green header__btn" href="#">Comprar</a>
+            <a class="js-anchor-animated btn-outline btn-outline_green header__btn" href="#comprar">Comprar</a>
         </div>
     </header>
-
+    <main>
+        <section class="hero" style="background-image: url(img/hero.jpg);">
+            <div class="container">
+                <div class="columns is-gapless">
+                    <div class="column is-6">
+                        <header class="hero__header">
+                            <h1 class="hero__title">Anillos para hacer hacer conciencia</h1>
+                            <p class="hero__text">Con el tiempo el baño de oro o plata entrara en desgaste creado una pieza única y especial para ti.</p>
+                            <a class="js-anchor-animated btn btn_green btn_width-1" href="#coleccion">Ver colección</a>
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="coleccion" class="collection section-gray">
+            <div class="container">
+                <div class="columns is-gapless is-centered">
+                    <div class="column is-5 is-4-desktop">
+                        <p>Piezas de edición limitada</p>
+                        <h2 class="collection__title">Nuestra colección de lanzamiento</h2>
+                        <a class="js-anchor-animated btn btn_green btn_width-2" href="#comprar">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="collection__gallery flex no-wrap-flex">
+                <figure class="collection__gallery-item">
+                    <figcaption class="collection__gallery-text">Arif</figcaption>
+                    <img class="collection__gallery-img" src="img/collection-1.png" alt="Arif">
+                </figure>
+                <figure class="collection__gallery-item">
+                    <figcaption class="collection__gallery-text">Olda</figcaption>
+                    <img class="collection__gallery-img" src="img/collection-2.png" alt="Olda">
+                </figure>
+                <figure class="collection__gallery-item">
+                    <figcaption class="collection__gallery-text">Tansy</figcaption>
+                    <img class="collection__gallery-img" src="img/collection-3.png" alt="Tansy">
+                </figure>
+                <figure class="collection__gallery-item">
+                    <figcaption class="collection__gallery-text">Alia</figcaption>
+                    <img class="collection__gallery-img" src="img/collection-4.png" alt="Alia">
+                </figure>
+            </div>
+        </section>
+        <section class="gallery">
+            <h2 class="off-screen">Galería</h2>
+            <div class="columns is-multiline">
+                <div class="column is-4">
+                    <a class="gallery__item" href="#">
+                        <img class="gallery__img" src="https://picsum.photos/452/270/?image=1025" alt="">
+                    </a>
+                </div>
+                <div class="column is-4">
+                    <a class="gallery__item" href="#">
+                        <img class="gallery__img" src="https://picsum.photos/452/270/?image=1012" alt="">
+                    </a>
+                </div>
+                <div class="column is-4">
+                    <a class="gallery__item" href="#">
+                        <img class="gallery__img" src="https://picsum.photos/452/270/?image=823" alt="">
+                    </a>
+                </div>
+                <div class="column is-4">
+                    <a class="gallery__item" href="#">
+                        <img class="gallery__img" src="https://picsum.photos/452/270/?image=821" alt="">
+                    </a>
+                </div>
+                <div class="column is-4">
+                    <a class="gallery__item" href="#">
+                        <img class="gallery__img" src="https://picsum.photos/452/270/?image=786" alt="">
+                    </a>
+                </div>
+                <div class="column is-4">
+                    <a class="gallery__item" href="#">
+                        <img class="gallery__img" src="https://picsum.photos/452/270/?image=777" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="comprar" class="buy section-gray">
+            <div class="container">
+                <h2 class="off-screen">Comprar</h2>
+                <div class="columns is-gapless is-centered">
+                    <div class="column is-7 is-6-desktop">
+                        <p class="buy__small-text text-center">Precio especial de lanzamiento</p>
+                        <p class="buy__price text-center">000.000 COP</p>
+                        <p class="buy__text text-center">Inscríbete en nuestra lista de espera para llamarte y agendar una cita, ademas de acceder al precio especial de lanzamiento (<b>20%</b> de descuento) en tu compra.</p>
+                    </div>
+                </div>
+                <div class="columns is-gapless is-centered">
+                    <div class="column is-5 is-4-desktop">
+                        <form action="">
+                            <div class="field">
+                                <label for="" class="field__label">Nombre</label>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="field">
+                                <label for="" class="field__label">Correo electrónico</label>
+                                <input type="email" name="" id="">
+                            </div>
+                            <div class="field">
+                                <label for="" class="field__label">Celular</label>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="field">
+                                <p class="field__label">Al enviar tus datos, aceptas nuestros términos y condiciones y politica de privacidad.</p>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn_green btn_width-1 buy__btn" type="submit">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="columns columns-margin-0 is-gapless-padding align-items-center">
+                    <div class="column is-3 is-offset-1">
+                        <figure class="about__img-container">
+                            <img class="about__img" src="img/ale-bahamon.jpg" alt="Alejandra Bahamón">
+                        </figure>
+                    </div>
+                    <div class="column is-6 is-offset-1">
+                        <h2 class="about__title">Alejandra Bahamón</h2>
+                        <p class="about__text">Comunicadora social y periodista de la Universidad de La Sabana, con énfasis en mercadeo y comunicación estratégica.Primera y única asesora de imagen certificada por Colour Me Beautiful Londres en Colombia. <br><br>“Para mí asesoría de imagen siempre ha sido reinventarse, ir más allá, es tener siempre algo que contar, jamás perder la vigencia, dejar una marca, es permitirnos ser recordados logrando un impacto en los otros partiendo de conocer la magia que llevamos dentro”</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
