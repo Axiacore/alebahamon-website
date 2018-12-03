@@ -12,7 +12,6 @@
     max-width: 270px
     width: 100%
 
-
 .btn
   // sass-lint:disable-block force-pseudo-nesting
   &_green
@@ -21,7 +20,6 @@
 
     &:hover:not(:disabled)
       background-color: lighten($green-primary, 10%)
-
 
 .btn-outline
   // sass-lint:disable-block force-pseudo-nesting nesting-depth
@@ -33,3 +31,11 @@
       background-color: $green-primary
       border-color: $green-primary
       color: $white
+
+.link
+  font-weight: 400
+  text-decoration: none
+  transition: color .4 $ease-in-out
+
+  &:hover
+    color: $green-primary
