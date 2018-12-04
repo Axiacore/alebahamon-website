@@ -54,3 +54,94 @@ a
   background: $gray-tertiary
   border-bottom: 1px solid $gray-quaternary
   border-top: 1px solid $gray-quaternary
+
+
+// ------------
+// Article
+// ------------
+.article
+  padding: shorthand-dms-rem(3 0)
+
+  @include breakpoint($tablet)
+    padding: shorthand-dms-rem(5 0, $tablet)
+
+  h1,
+  h2
+    @extend %f-mobile-p-2
+    font-weight: 600
+    margin: shorthand-dms-rem(3 0 2)
+    text-align: center
+
+    @include breakpoint($tablet)
+      @extend %f-tablet-p-2
+      margin: shorthand-dms-rem(3 0 2, $tablet)
+
+  h3
+    @extend %f-mobile-p-1
+    font-weight: 600
+    margin: shorthand-dms-rem(2 0 1)
+
+    @include breakpoint($tablet)
+      @extend %f-tablet-p-1
+      margin: shorthand-dms-rem(2 0 1, $tablet)
+
+  h4,
+  h5,
+  h6
+    @extend %f-mobile-p-0
+    font-weight: 600
+    margin-bottom: dms-rem(.5)
+
+    @include breakpoint($tablet)
+      @extend %f-tablet-p-0
+      margin-bottom: dms-rem(.5, $tablet)
+
+  p,
+  ul,
+  ol
+    margin-bottom: dms-rem(1)
+
+    @include breakpoint($tablet)
+      margin-bottom: dms-rem(1, $tablet)
+
+  a
+    transition: color .4s $ease-in-out
+
+    &:hover
+      color: $green-primary
+
+  > *:first-child
+    margin-top: 0
+
+  > *:last-child
+    margin-bottom: 0
+
+
+// ------------
+// Messages
+// ------------
+.messages
+  background-position: center bottom
+  background-repeat: no-repeat
+  background-size: 100% auto
+  min-height: 70vh
+  padding: shorthand-dms-rem(3 0)
+
+  @include breakpoint($tablet)
+    min-height: calc(100vh - 235px)
+    padding: shorthand-dms-rem(5 0, $tablet)
+
+  &__title
+    @extend %f-mobile-p-3
+    font-weight: 600
+    margin-bottom: dms-rem(1)
+
+    @include breakpoint($tablet)
+      @extend %f-tablet-p-3
+      margin-bottom: dms-rem(1, $tablet)
+
+  &__text
+    margin-bottom: dms-rem(1)
+
+    @include breakpoint($tablet)
+      margin-bottom: dms-rem(1, $tablet)

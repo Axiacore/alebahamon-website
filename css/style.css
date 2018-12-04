@@ -2183,18 +2183,26 @@ select[multiple] option {
   line-height: 15px;
 }
 
-body, .btn,
+.article h4,
+.article h5,
+.article h6, body, .btn,
 .btn-outline {
   font-size: 1rem;
   line-height: 1.4rem;
 }
 
-.about__title {
+.article h3 {
+  font-size: 1.2rem;
+  line-height: 1.68rem;
+}
+
+.about__title, .article h1,
+.article h2 {
   font-size: 1.44rem;
   line-height: 1.89rem;
 }
 
-.hero__title {
+.hero__title, .messages__title {
   font-size: 1.728rem;
   line-height: 2.31rem;
 }
@@ -2217,21 +2225,30 @@ body, .btn,
   }
 }
 @media only screen and (min-width: 768px) {
-  body {
+  .article h4,
+.article h5,
+.article h6, body {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 @media only screen and (min-width: 768px) {
-  .hero__text {
+  .hero__text, .article h3 {
     font-size: 1.2rem;
     line-height: 1.8rem;
   }
 }
 @media only screen and (min-width: 768px) {
-  .about__title {
+  .about__title, .article h1,
+.article h2 {
     font-size: 1.44rem;
     line-height: 2.025rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .messages__title {
+    font-size: 1.728rem;
+    line-height: 2.4rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -2346,6 +2363,104 @@ a {
   background: #fafafa;
   border-bottom: 1px solid #d2d2d2;
   border-top: 1px solid #d2d2d2;
+}
+
+.article {
+  padding: 4.2rem 0rem;
+}
+@media only screen and (min-width: 768px) {
+  .article {
+    padding: 7.5rem 0rem;
+  }
+}
+.article h1,
+.article h2 {
+  font-weight: 600;
+  margin: 4.2rem 0rem 2.8rem;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .article h1,
+.article h2 {
+    margin: 4.5rem 0rem 3rem;
+  }
+}
+.article h3 {
+  font-weight: 600;
+  margin: 2.8rem 0rem 1.4rem;
+}
+@media only screen and (min-width: 768px) {
+  .article h3 {
+    margin: 3rem 0rem 1.5rem;
+  }
+}
+.article h4,
+.article h5,
+.article h6 {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+@media only screen and (min-width: 768px) {
+  .article h4,
+.article h5,
+.article h6 {
+    margin-bottom: 0.75rem;
+  }
+}
+.article p,
+.article ul,
+.article ol {
+  margin-bottom: 1.4rem;
+}
+@media only screen and (min-width: 768px) {
+  .article p,
+.article ul,
+.article ol {
+    margin-bottom: 1.5rem;
+  }
+}
+.article a {
+  transition: color 0.4s ease;
+}
+.article a:hover {
+  color: #1a3e39;
+}
+.article > *:first-child {
+  margin-top: 0;
+}
+.article > *:last-child {
+  margin-bottom: 0;
+}
+
+.messages {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  min-height: 70vh;
+  padding: 4.2rem 0rem;
+}
+@media only screen and (min-width: 768px) {
+  .messages {
+    min-height: calc(100vh - 235px);
+    padding: 7.5rem 0rem;
+  }
+}
+.messages__title {
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+}
+@media only screen and (min-width: 768px) {
+  .messages__title {
+    margin-bottom: 1.5rem;
+  }
+}
+.messages__text {
+  margin-bottom: 1.4rem;
+}
+@media only screen and (min-width: 768px) {
+  .messages__text {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .header__container {
