@@ -2178,7 +2178,7 @@ select[multiple] option {
   line-height: 14px;
 }
 
-.about__text, .collection__gallery-text, .field__label {
+.transform__title, .about__text, .collection__gallery-text, .field__label {
   font-size: 0.8333333333rem;
   line-height: 15px;
 }
@@ -2211,7 +2211,7 @@ body, .btn,
   }
 }
 @media only screen and (min-width: 768px) {
-  .about__text, .collection__gallery-text, .field__label {
+  .ring-item__text, .transform__title, .about__text, .collection__gallery-text, .field__label {
     font-size: 0.8333333333rem;
     line-height: 18px;
   }
@@ -2668,6 +2668,133 @@ a {
   .about__title {
     margin-bottom: 1.5rem;
   }
+}
+.transform {
+  padding: 2.8rem 0rem 5.6rem;
+}
+@media only screen and (min-width: 768px) {
+  .transform {
+    padding: 4.5rem 0rem 10.5rem;
+  }
+}
+.transform__sticky {
+  position: sticky;
+  top: 20px;
+}
+.transform__title {
+  position: absolute;
+  top: auto;
+  left: auto;
+  align-items: flex-end;
+  display: flex;
+  font-weight: 400;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: 0 0;
+}
+.transform__title::before {
+  width: 60px;
+  height: 1px;
+  background: #1a3e39;
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .transform__title::before {
+    margin-right: 12px;
+  }
+}
+.transform__text {
+  margin-bottom: 7rem;
+}
+@media only screen and (min-width: 768px) {
+  .transform__text {
+    margin-bottom: 7.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ring-list_active .ring-item__img-container {
+    position: fixed;
+  }
+}
+
+.ring-item {
+  padding: 2.1rem 0rem 2.1rem 2.8rem;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .ring-item {
+    padding: 5.25rem 0rem;
+  }
+  .ring-item:nth-child(odd) .ring-item__text {
+    text-align: right;
+  }
+}
+.ring-item:first-child {
+  padding-top: 0;
+}
+.ring-item:last-child {
+  padding-bottom: 0;
+}
+.ring-item__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ring-item__img-container {
+  margin: 0 auto;
+  max-width: 370px;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .ring-item__img-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.35s ease, visibility 0.35s ease, top 0.35s ease;
+    visibility: hidden;
+  }
+  .ring-item__img-container_active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.ring-item__text {
+  margin-top: 4.2rem;
+}
+@media only screen and (min-width: 768px) {
+  .ring-item__text {
+    margin-top: 0;
+  }
+}
+
+.dots {
+  margin-bottom: 2.8rem;
+}
+@media only screen and (min-width: 768px) {
+  .dots {
+    margin-bottom: 3rem;
+  }
+}
+.dots__item {
+  width: 8px;
+  height: 8px;
+  background: #1a3e39;
+  border-radius: 50%;
+  display: block;
+  margin: 0rem auto 0.7rem;
+}
+@media only screen and (min-width: 768px) {
+  .dots__item {
+    margin-bottom: 0.75rem;
+  }
+}
+.dots__item:last-child {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
