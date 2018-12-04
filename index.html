@@ -7,6 +7,8 @@
     <title>Alejandra Bahamón</title>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -52,6 +54,57 @@
                 </div>
             </div>
         </section>
+        <section class="transform">
+            <div class="container">
+                <div class="columns is-gapless is-centered is-multiline">
+                    <div class="column is-8 is-6-desktop">
+                        <div class="dots">
+                            <span class="dots__item"></span>
+                            <span class="dots__item"></span>
+                            <span class="dots__item"></span>
+                        </div>
+                        <p class="transform__text text-center">Estos anillos, son piezas para hacer conciencia de la magia que sentimos al experimentar transformación, con el tiempo el baño de oro o plata entrará en un desgaste natural que empezará a revelar los acabados de la porcelana en que están elaborados.</p>
+                    </div>
+                    <div class="transform__sticky column is-12">
+                        <h2 class="transform__title">Transforma</h2>
+                    </div>
+                    <div class="column is-10">
+                        <div class="js-ring-list ring-list">
+                            <div class="js-ring-item ring-item">
+                                <figure class="ring-item__img-container ring-item__img-container_active">
+                                    <img class="ring-item__img" src="img/ring-1.png" alt="Ring 1">
+                                </figure>
+                                <div class="columns is-gapless justify-content-flex-end">
+                                    <div class="column is-3">
+                                        <p class="ring-item__text">Estos anillos, son piezas para hacer conciencia de la magia que sentimos al experimentar transformación, con el tiempo el baño de oro o plata entrará en un desgaste natural que empezará a revelar los acabados de la porcelana en que están elaborados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-ring-item ring-item">
+                                <figure class="ring-item__img-container">
+                                    <img class="ring-item__img" src="img/ring-2.png" alt="Ring 2">
+                                </figure>
+                                <div class="columns is-gapless">
+                                    <div class="column is-3">
+                                        <p class="ring-item__text">En la medida en que entramos en contacto con nosotros mismos, entendemos realmente de qué estamos hechos, revelamos nuestra esencia, nuestras texturas, nuestros colores. Cada anillo cuenta con un acabado diferente, el desgaste será único y dependerá del contacto que tengas con la pieza.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-ring-item ring-item">
+                                <figure class="ring-item__img-container">
+                                    <img class="ring-item__img" src="img/ring-3.png" alt="Ring 3">
+                                </figure>
+                                <div class="columns is-gapless justify-content-flex-end">
+                                    <div class="column is-3">
+                                        <p class="ring-item__text">Así mismo, su empaque está hecho en papel reciclado y una fibra natural llena de semillas que germinarán una vez lo siembres, experimentar transformación es disfrutar del proceso, tanto en el principio como en el final.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </section>
         <section id="coleccion" class="collection section-gray">
             <div class="container">
                 <div class="columns is-gapless is-centered">
@@ -85,32 +138,32 @@
             <h2 class="off-screen">Galería</h2>
             <div class="columns is-multiline">
                 <div class="column is-4">
-                    <a class="gallery__item" href="#">
+                    <a class="js-gallery gallery__item" href="img/hero.jpg">
                         <img class="gallery__img" src="https://picsum.photos/452/270/?image=1025" alt="">
                     </a>
                 </div>
                 <div class="column is-4">
-                    <a class="gallery__item" href="#">
+                    <a class="js-gallery gallery__item" href="img/hero.jpg">
                         <img class="gallery__img" src="https://picsum.photos/452/270/?image=1012" alt="">
                     </a>
                 </div>
                 <div class="column is-4">
-                    <a class="gallery__item" href="#">
+                    <a class="js-gallery gallery__item" href="img/hero.jpg">
                         <img class="gallery__img" src="https://picsum.photos/452/270/?image=823" alt="">
                     </a>
                 </div>
                 <div class="column is-4">
-                    <a class="gallery__item" href="#">
+                    <a class="js-gallery gallery__item" href="img/hero.jpg">
                         <img class="gallery__img" src="https://picsum.photos/452/270/?image=821" alt="">
                     </a>
                 </div>
                 <div class="column is-4">
-                    <a class="gallery__item" href="#">
+                    <a class="js-gallery gallery__item" href="img/hero.jpg">
                         <img class="gallery__img" src="https://picsum.photos/452/270/?image=786" alt="">
                     </a>
                 </div>
                 <div class="column is-4">
-                    <a class="gallery__item" href="#">
+                    <a class="js-gallery gallery__item" href="img/hero.jpg">
                         <img class="gallery__img" src="https://picsum.photos/452/270/?image=777" alt="">
                     </a>
                 </div>
@@ -196,6 +249,9 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js"></script>
+    <script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js"></script>
+    <script src="js/intersection-observer.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
