@@ -200,3 +200,117 @@
     @include breakpoint($tablet)
       // sass-lint:disable-block space-around-operator
       @extend %f-tablet-n-1
+
+
+// --------------
+// Transform
+// --------------
+.transform
+  padding: shorthand-dms-rem(2 0 4)
+
+  @include breakpoint($tablet)
+    padding: shorthand-dms-rem(3 0 7, $tablet)
+
+  &__sticky
+    position: sticky
+    top: 20px
+
+  &__title
+    @extend %f-mobile-n-1
+    @include position(absolute, auto null null auto)
+    align-items: flex-end
+    display: flex
+    font-weight: 400
+    transform: rotate(-90deg) translateX(-100%)
+    transform-origin: 0 0
+
+    @include breakpoint($tablet)
+      // sass-lint:disable-block space-around-operator
+      @extend %f-tablet-n-1
+
+
+    &::before
+      @include size(60px, 1px)
+      background: $green-primary
+      content: ''
+      display: block
+      flex-shrink: 0
+      margin-right: dms-px(.5)
+
+      @include breakpoint($tablet)
+        margin-right: dms-px(.5, $tablet)
+
+  &__text
+    margin-bottom: dms-rem(5)
+
+    @include breakpoint($tablet)
+      margin-bottom: dms-rem(5, $tablet)
+
+.ring-list
+  @include breakpoint($tablet)
+    &_active
+      .ring-item__img-container
+        position: fixed
+
+.ring-item
+  padding: shorthand-dms-rem(1.5 0 1.5 2)
+  position: relative
+
+  @include breakpoint($tablet)
+    padding: shorthand-dms-rem(3.5 0, $tablet)
+
+    &:nth-child(odd)
+      .ring-item__text
+        text-align: right
+
+  &:first-child
+    padding-top: 0
+
+  &:last-child
+    padding-bottom: 0
+
+  &__img
+    @include size(100%, auto)
+    display: block
+
+    &-container
+      margin: 0 auto
+      max-width: 370px
+      width: 100%
+
+      @include breakpoint($tablet)
+        @include position(absolute, 50% null null 50%)
+        opacity: 0
+        transform: translate(-50%, -50%)
+        transition: opacity .35s $ease-in-out, visibility .35s $ease-in-out, top .35s $ease-in-out
+        visibility: hidden
+
+        &_active
+          opacity: 1
+          visibility: visible
+
+  &__text
+    margin-top: dms-rem(3)
+
+    @include breakpoint($tablet)
+      @extend %f-tablet-n-1
+      margin-top: 0
+
+.dots
+  margin-bottom: dms-rem(2)
+
+  @include breakpoint($tablet)
+    margin-bottom: dms-rem(2, $tablet)
+
+  &__item
+    @include size(8px)
+    background: $green-primary
+    border-radius: 50%
+    display: block
+    margin: shorthand-dms-rem(0 auto .5)
+
+    @include breakpoint($tablet)
+      margin-bottom: dms-rem(.5, $tablet)
+
+    &:last-child
+      margin-bottom: 0
