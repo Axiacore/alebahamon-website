@@ -2250,13 +2250,13 @@ body, .btn,
 .btn-outline {
   font-weight: 400;
 }
-.btn_width-1,
-.btn-outline_width-1 {
+.btn_max-width-270,
+.btn-outline_max-width-270 {
   max-width: 270px;
   width: 100%;
 }
-.btn_width-2,
-.btn-outline_width-2 {
+.btn_max-width-170,
+.btn-outline_max-width-170 {
   max-width: 170px;
   width: 100%;
 }
