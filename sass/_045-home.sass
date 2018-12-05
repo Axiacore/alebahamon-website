@@ -211,10 +211,6 @@
   @include breakpoint($tablet)
     padding: shorthand-dms-rem(3 0 7, $tablet)
 
-  &__sticky
-    position: sticky
-    top: 20px
-
   &__title
     @extend %f-mobile-n-1
     @include position(absolute, auto null null auto)
@@ -240,17 +236,48 @@
       @include breakpoint($tablet)
         margin-right: dms-px(.5, $tablet)
 
+    &-container
+      position: sticky
+      top: dms-rem(1)
+      width: 100%
+
+      @include breakpoint($tablet)
+        top: dms-rem(1, $tablet)
+
   &__text
     margin-bottom: dms-rem(5)
 
     @include breakpoint($tablet)
       margin-bottom: dms-rem(5, $tablet)
 
-.ring-list
-  @include breakpoint($tablet)
-    &_active
-      .ring-item__img-container
-        position: fixed
+  &__img
+    @include position(absolute, 50% null null 0)
+    padding-top: 100%
+    transform: translateY(-50%)
+    width: 100%
+
+    &-container
+      display: none
+      margin: 0 auto
+      max-width: 370px
+      position: sticky
+      top: 50%
+      width: 100%
+      z-index: 2
+
+      @include breakpoint($tablet)
+        display: block
+        margin: shorthand-dms-rem(2.5 0, $tablet)
+
+    &-item
+      @include position(absolute, 0 null null 0)
+      opacity: 0
+      transition: opacity .35s $ease-in-out, visibility .35s $ease-in-out
+      visibility: hidden
+
+      &_active
+        opacity: 1
+        visibility: visible
 
 .ring-item
   padding: shorthand-dms-rem(1.5 0 1.5 2)
@@ -279,15 +306,7 @@
       width: 100%
 
       @include breakpoint($tablet)
-        @include position(absolute, 50% null null 50%)
-        opacity: 0
-        transform: translate(-50%, -50%)
-        transition: opacity .35s $ease-in-out, visibility .35s $ease-in-out, top .35s $ease-in-out
-        visibility: hidden
-
-        &_active
-          opacity: 1
-          visibility: visible
+        display: none
 
   &__text
     margin-top: dms-rem(3)

@@ -2792,10 +2792,6 @@ a {
     padding: 4.5rem 0rem 10.5rem;
   }
 }
-.transform__sticky {
-  position: sticky;
-  top: 20px;
-}
 .transform__title {
   position: absolute;
   top: auto;
@@ -2820,6 +2816,16 @@ a {
     margin-right: 12px;
   }
 }
+.transform__title-container {
+  position: sticky;
+  top: 1.4rem;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .transform__title-container {
+    top: 1.5rem;
+  }
+}
 .transform__text {
   margin-bottom: 7rem;
 }
@@ -2828,11 +2834,40 @@ a {
     margin-bottom: 7.5rem;
   }
 }
-
+.transform__img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding-top: 100%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.transform__img-container {
+  display: none;
+  margin: 0 auto;
+  max-width: 370px;
+  position: sticky;
+  top: 50%;
+  width: 100%;
+  z-index: 2;
+}
 @media only screen and (min-width: 768px) {
-  .ring-list_active .ring-item__img-container {
-    position: fixed;
+  .transform__img-container {
+    display: block;
+    margin: 3.75rem 0rem;
   }
+}
+.transform__img-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  visibility: hidden;
+}
+.transform__img-item_active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .ring-item {
@@ -2865,17 +2900,7 @@ a {
 }
 @media only screen and (min-width: 768px) {
   .ring-item__img-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.35s ease, visibility 0.35s ease, top 0.35s ease;
-    visibility: hidden;
-  }
-  .ring-item__img-container_active {
-    opacity: 1;
-    visibility: visible;
+    display: none;
   }
 }
 .ring-item__text {
