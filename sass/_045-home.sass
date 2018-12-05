@@ -4,7 +4,7 @@
 .hero
   align-items: flex-end
   background-color: $pink-secondary
-  background-position: top 50%
+  background-position: 60% 0%
   background-repeat: no-repeat
   background-size: auto 100%
   color: $green-primary
@@ -12,12 +12,12 @@
   min-height: 480px
   position: relative
 
-  @include breakpoint($mobile)
-    background-position: top right
-
   @include breakpoint($tablet)
     align-items: center
     min-height: 100vh
+
+  @include breakpoint($desktop)
+    background-position: 100% 0%
 
   &__header
     max-width: 210px
@@ -100,6 +100,7 @@
 .gallery
   margin: 0 auto
   max-width: 1440px
+  overflow: hidden
   padding: shorthand-dms-rem(4 0)
 
   @include breakpoint($tablet)
@@ -237,11 +238,14 @@
         margin-right: dms-px(.5, $tablet)
 
     &-container
-      position: sticky
+      margin-bottom: dms-rem(5)
+      position: -webkit-sticky // sass-lint:disable-line no-vendor-prefixes
+      position: sticky // sass-lint:disable-line no-duplicate-properties
       top: dms-rem(1)
       width: 100%
 
       @include breakpoint($tablet)
+        margin-bottom: dms-rem(3, $tablet)
         top: dms-rem(1, $tablet)
 
   &__text
@@ -260,7 +264,8 @@
       display: none
       margin: 0 auto
       max-width: 370px
-      position: sticky
+      position: -webkit-sticky // sass-lint:disable-line no-vendor-prefixes
+      position: sticky // sass-lint:disable-line no-duplicate-properties
       top: 50%
       width: 100%
       z-index: 2
