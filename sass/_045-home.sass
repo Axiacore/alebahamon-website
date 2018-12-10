@@ -21,12 +21,12 @@
 
   &__header
     max-width: 210px
-    padding: shorthand-dms-rem(2 0)
+    padding: dms-rem(2 0)
     position: relative
 
     @include breakpoint($tablet)
       max-width: none
-      padding: shorthand-dms-rem(2 0, $tablet)
+      padding: dms-rem(2 0, $tablet)
 
   &__title
     @extend %f-mobile-p-3
@@ -65,7 +65,7 @@
       margin-bottom: dms-rem(1, $tablet)
 
   &__gallery
-    margin: shorthand-dms-rem(1 auto 0)
+    margin: dms-rem(1 auto 0)
     overflow: auto
     width: 100%
 
@@ -75,6 +75,7 @@
 
     &-item
       flex-shrink: 0
+      position: relative
       width: 225px
 
       @include breakpoint($tablet)
@@ -82,12 +83,12 @@
 
     &-text
       @extend %f-mobile-n-1
-      margin-bottom: dms-rem(.5)
+      @include position(absolute, 0 null null 0)
       text-align: center
+      width: 100%
 
       @include breakpoint($tablet)
         @extend %f-tablet-n-1
-        margin-bottom: dms-rem(.5, $tablet)
 
     &-img
       @include size(100%, auto)
@@ -101,10 +102,10 @@
   margin: 0 auto
   max-width: 1440px
   overflow: hidden
-  padding: shorthand-dms-rem(4 0)
+  padding: dms-rem(4 0)
 
   @include breakpoint($tablet)
-    padding: shorthand-dms-rem(6 0, $tablet)
+    padding: dms-rem(6 0, $tablet)
 
   &__item
     display: block
@@ -130,10 +131,10 @@
 // --------
 .buy
   // sass-lint:disable-block space-around-operator
-  padding: shorthand-dms-rem(4 0)
+  padding: dms-rem(4 0)
 
   @include breakpoint($tablet)
-    padding: shorthand-dms-rem(5 0, $tablet)
+    padding: dms-rem(5 0, $tablet)
 
   &__small-text
     @extend %f-mobile-n-2
@@ -167,10 +168,10 @@
 // About
 // ----------
 .about
-  padding: shorthand-dms-rem(4 0)
+  padding: dms-rem(4 0)
 
   @include breakpoint($tablet)
-    padding: shorthand-dms-rem(7 0 5, $tablet)
+    padding: dms-rem(7 0 5, $tablet)
 
   &__img
     @include size(100%, auto)
@@ -180,7 +181,7 @@
     &-container
       border: 10px solid $gray-tertiary
       border-radius: 50%
-      margin: shorthand-dms-rem(0 auto 1)
+      margin: dms-rem(0 auto 1)
       max-width: 290px
       width: 100%
 
@@ -207,10 +208,10 @@
 // Transform
 // --------------
 .transform
-  padding: shorthand-dms-rem(2 0 4)
+  padding: dms-rem(2 0 4)
 
   @include breakpoint($tablet)
-    padding: shorthand-dms-rem(3 0 7, $tablet)
+    padding: dms-rem(3 0 7, $tablet)
 
   &__title
     @extend %f-mobile-n-1
@@ -272,7 +273,7 @@
 
       @include breakpoint($tablet)
         display: block
-        margin: shorthand-dms-rem(2.5 0, $tablet)
+        margin: dms-rem(2.5 0, $tablet)
 
     &-item
       @include position(absolute, 0 null null 0)
@@ -285,11 +286,11 @@
         visibility: visible
 
 .ring-item
-  padding: shorthand-dms-rem(1.5 0 1.5 2)
+  padding: dms-rem(1.5 0 1.5 2)
   position: relative
 
   @include breakpoint($tablet)
-    padding: shorthand-dms-rem(3.5 0, $tablet)
+    padding: dms-rem(3.5 0, $tablet)
 
     &:nth-child(odd)
       .ring-item__text
@@ -331,7 +332,7 @@
     background: $green-primary
     border-radius: 50%
     display: block
-    margin: shorthand-dms-rem(0 auto .5)
+    margin: dms-rem(0 auto .5)
 
     @include breakpoint($tablet)
       margin-bottom: dms-rem(.5, $tablet)

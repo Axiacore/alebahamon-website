@@ -60,30 +60,30 @@ a
 // Article
 // ------------
 .article
-  padding: shorthand-dms-rem(3 0)
+  padding: dms-rem(3 0)
 
   @include breakpoint($tablet)
-    padding: shorthand-dms-rem(5 0, $tablet)
+    padding: dms-rem(5 0, $tablet)
 
   h1,
   h2
     @extend %f-mobile-p-2
     font-weight: 600
-    margin: shorthand-dms-rem(3 0 2)
+    margin: dms-rem(3 0 2)
     text-align: center
 
     @include breakpoint($tablet)
       @extend %f-tablet-p-2
-      margin: shorthand-dms-rem(3 0 2, $tablet)
+      margin: dms-rem(3 0 2, $tablet)
 
   h3
     @extend %f-mobile-p-1
     font-weight: 600
-    margin: shorthand-dms-rem(2 0 1)
+    margin: dms-rem(2 0 1)
 
     @include breakpoint($tablet)
       @extend %f-tablet-p-1
-      margin: shorthand-dms-rem(2 0 1, $tablet)
+      margin: dms-rem(2 0 1, $tablet)
 
   h4,
   h5,
@@ -125,11 +125,11 @@ a
   background-repeat: no-repeat
   background-size: 100% auto
   min-height: 70vh
-  padding: shorthand-dms-rem(3 0)
+  padding: dms-rem(3 0)
 
   @include breakpoint($tablet)
     min-height: calc(100vh - 235px)
-    padding: shorthand-dms-rem(5 0, $tablet)
+    padding: dms-rem(5 0, $tablet)
 
   &__title
     @extend %f-mobile-p-3

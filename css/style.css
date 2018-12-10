@@ -2665,6 +2665,7 @@ a {
 }
 .collection__gallery-item {
   flex-shrink: 0;
+  position: relative;
   width: 225px;
 }
 @media only screen and (min-width: 768px) {
@@ -2673,13 +2674,11 @@ a {
   }
 }
 .collection__gallery-text {
-  margin-bottom: 0.7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
   text-align: center;
-}
-@media only screen and (min-width: 768px) {
-  .collection__gallery-text {
-    margin-bottom: 0.75rem;
-  }
+  width: 100%;
 }
 .collection__gallery-img {
   width: 100%;
