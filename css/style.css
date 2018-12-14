@@ -2116,7 +2116,7 @@ select::-ms-expand {
   line-height: 14px;
 }
 
-.transform__title, .about__text, .collection__gallery-text, .mce_inline_error, .field__label {
+.transform__title, .about__text, .collection__gallery-text, div.mce_inline_error, .field__label {
   font-size: 0.8333333333rem;
   line-height: 15px;
 }
@@ -2157,7 +2157,7 @@ select::-ms-expand {
   }
 }
 @media only screen and (min-width: 768px) {
-  .ring-item__text, .transform__title, .about__text, .collection__gallery-text, .mce_inline_error, .field__label {
+  .ring-item__text, .transform__title, .about__text, .collection__gallery-text, div.mce_inline_error, .field__label {
     font-size: 0.8333333333rem;
     line-height: 18px;
   }
