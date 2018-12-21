@@ -88,7 +88,9 @@
       width: 100%
 
       @include breakpoint($tablet)
+        // sass-lint:disable-block space-around-operator
         @extend %f-tablet-n-1
+
 
     &-img
       @include size(100%, auto)
@@ -109,10 +111,55 @@
 
   &__item
     display: block
+    overflow: hidden
+    position: relative
+
+    &:hover
+      &::before,
+      .gallery__icon
+        opacity: 1
+
+      .gallery__img
+        transform: scale(1.025)
+
+    &::before
+      @include position(absolute, 0)
+      $black-opacity: rgba($black, .5)
+      background: $black-opacity
+      content: ''
+      opacity: 0
+      transition: opacity .35s $ease-in-out
+      z-index: 2
+
+  &__icon
+    @include position(absolute, 50% null null 50%)
+    @include size(40px)
+    border: 1px solid $white
+    border-radius: 50%
+    display: block
+    opacity: 0
+    transform: translate(-50%, -50%)
+    transition: opacity .35s $ease-in-out
+    z-index: 3
+
+    &::before,
+    &::after
+      @include position(absolute, 50% null null 50%)
+      background: $white
+      content: ''
+      display: block
+      transform: translate(-50%, -50%)
+
+    &::before
+      @include size(50%, 1px)
+
+    &::after
+      @include size(1px, 50%)
 
   &__img
     @include size(100%, auto)
     display: block
+    transition: transform .5s $ease-in-out
 
   .column
     display: none
@@ -339,3 +386,64 @@
 
     &:last-child
       margin-bottom: 0
+
+
+// --------------
+// Featherlight
+// --------------
+.featherlight-next,
+.featherlight-previous
+  @include size(30px)
+  $black-opacity: rgba($black, .25)
+  background: $black-opacity
+  border: 1px solid $white
+  border-radius: 50%
+  bottom: auto
+  top: 50%
+  transform: translateY(-50%)
+  transition: background-color .35s $ease-in-out
+
+  @include breakpoint($tablet)
+    @include size(40px)
+
+
+  &:hover
+    $black-opacity: rgba($black, .75)
+    background: $black-opacity
+
+    span
+      display: none
+
+  &::before
+    @include position(absolute, 50% null null 50%)
+    @include size(8px)
+    border-left: 1px solid $white
+    border-top: 1px solid $white
+    content: ''
+
+    @include breakpoint($tablet)
+      @include size(12px)
+
+
+  span
+    display: none
+
+.featherlight-next
+  left: auto
+  right: 20px
+
+  @include breakpoint($tablet)
+    right: 40px
+
+  &::before
+    transform: translate(-70%, -50%) rotate(135deg)
+
+.featherlight-previous
+  left: 20px
+  right: auto
+
+  @include breakpoint($tablet)
+    left: 40px
+
+  &::before
+    transform: translate(-30%, -50%) rotate(-45deg)
