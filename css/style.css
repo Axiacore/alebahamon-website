@@ -2116,7 +2116,7 @@ select::-ms-expand {
   line-height: 14px;
 }
 
-.transform__title, .about__text, .collection__gallery-text, div.mce_inline_error, .field__label {
+.transform__title, .collection__gallery-text, div.mce_inline_error, .field__label {
   font-size: 0.8333333333rem;
   line-height: 15px;
 }
@@ -2157,7 +2157,7 @@ select::-ms-expand {
   }
 }
 @media only screen and (min-width: 768px) {
-  .ring-item__text, .transform__title, .about__text, .collection__gallery-text, div.mce_inline_error, .field__label {
+  .ring-item__text, .transform__title, .collection__gallery-text, div.mce_inline_error, .field__label {
     font-size: 0.8333333333rem;
     line-height: 18px;
   }
@@ -2262,7 +2262,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #333;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Spinnaker", sans-serif;
   font-weight: 400;
   min-height: 100%;
   min-width: 320px;
@@ -2590,11 +2590,11 @@ a {
   }
 }
 .hero__title {
-  margin-bottom: 0.35rem;
+  margin-bottom: 1.05rem;
 }
 @media only screen and (min-width: 768px) {
   .hero__title {
-    margin-bottom: 0.375rem;
+    margin-bottom: 1.125rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -2818,6 +2818,7 @@ a {
     margin-bottom: 1.5rem;
   }
 }
+
 .transform {
   padding: 2.8rem 0rem 5.6rem;
 }

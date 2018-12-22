@@ -59,11 +59,11 @@
 
   &__title
     @extend %f-mobile-p-3
-    margin-bottom: dms-rem(.25)
+    margin-bottom: dms-rem(.75)
 
     @include breakpoint($tablet)
       @extend %f-tablet-p-4
-      margin-bottom: dms-rem(.25, $tablet)
+      margin-bottom: dms-rem(.75, $tablet)
 
     @include breakpoint($widescreen)
       width: 80%
@@ -278,13 +278,6 @@
     @include breakpoint($tablet)
       @extend %f-tablet-p-2
       margin-bottom: dms-rem(1, $tablet)
-
-  &__text
-    @extend %f-mobile-n-1
-
-    @include breakpoint($tablet)
-      // sass-lint:disable-block space-around-operator
-      @extend %f-tablet-n-1
 
 
 // --------------
