@@ -41,17 +41,20 @@
         </div>
     </header>
     <main>
-        <section class="hero" style="background-image: url(img/hero.jpg);">
-            <div class="container">
-                <div class="columns is-gapless">
-                    <div class="column is-6">
-                        <header class="hero__header">
-                            <h1 class="hero__title">Estos anillos son piezas para hacer conciencia de los procesos de cambio</h1>
-                            <p class="hero__text">Con el tiempo el baño en oro entrará en un desgaste natural que revelará los acabados en que están elaborados, la idea es seguir encontrando belleza una vez pierdan su brillo.</p>
-                            <a class="js-anchor-animated btn btn_green btn_max-width-270" href="#coleccion">Ver colección</a>
-                        </header>
-                    </div>
-                </div>
+        <section class="hero">
+            <div class="container flex align-items-center">
+                <figure class="hero__figure">
+                    <picture>
+                        <source srcset="img/hero-mobile.jpg" media="(max-width: 767px)">
+                        <source srcset="img/hero-tablet.jpg" media="(max-width: 1199px)">
+                        <img class="hero__img" srcset="img/hero-desktop.jpg" alt="Estos anillos son piezas para hacer conciencia de los procesos de cambio">
+                    </picture>
+                </figure>
+                <header class="hero__header">
+                    <h1 class="hero__title">Estos anillos son piezas para hacer conciencia de los procesos de cambio</h1>
+                    <p class="hero__text">Con el tiempo el baño en oro entrará en un desgaste natural que revelará los acabados en que están elaborados, la idea es seguir encontrando belleza una vez pierdan su brillo.</p>
+                    <a class="js-anchor-animated btn btn_green btn_max-width-270" href="#coleccion">Ver colección</a>
+                </header>
             </div>
         </section>
         <section class="transform">
@@ -321,6 +324,7 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
     <script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js"></script>
     <script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js"></script>
     <script src="js/intersection-observer.js"></script>
