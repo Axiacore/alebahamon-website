@@ -2633,20 +2633,20 @@ a {
   }
 }
 .collection__gallery {
-  margin: 1.4rem auto 0rem;
+  margin: 2.8rem auto 0rem;
   overflow: auto;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .collection__gallery {
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     max-width: 1440px;
   }
 }
 .collection__gallery-item {
   flex-shrink: 0;
   position: relative;
-  width: 225px;
+  width: 250px;
 }
 @media only screen and (min-width: 768px) {
   .collection__gallery-item {
