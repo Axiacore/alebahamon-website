@@ -163,6 +163,12 @@
       transition: opacity .35s $ease-in-out
       z-index: 2
 
+    &_margin-bottom-30
+      margin-bottom: #{$column-gap * 2}
+
+    &_full-height
+      height: 100%
+
   &__icon
     @include position(absolute, 50% null null 50%)
     @include size(40px)
@@ -189,20 +195,16 @@
       @include size(1px, 50%)
 
   &__img
-    @include size(100%, auto)
+    @include size(100%, null)
     display: block
     transition: transform .5s $ease-in-out
 
   .column
-    display: none
-
-    &:nth-child(1),
-    &:nth-child(2),
     &:nth-child(3)
-      display: block
+      display: none
 
-    @include breakpoint($tablet)
-      display: block
+      @include breakpoint($tablet)
+        display: block
 
 
 // --------
@@ -248,9 +250,11 @@
 // ----------
 .about
   padding: dms-rem(4 0)
+  text-align: center
 
   @include breakpoint($tablet)
     padding: dms-rem(7 0 5, $tablet)
+    text-align: left
 
   &__img
     @include size(100%, auto)
@@ -387,14 +391,13 @@
 
     &-container
       margin: 0 auto
-      max-width: 370px
       width: 100%
 
       @include breakpoint($tablet)
         display: none
 
   &__text
-    margin-top: dms-rem(3)
+    margin-top: dms-rem(1.5)
 
     @include breakpoint($tablet)
       @extend %f-tablet-n-1

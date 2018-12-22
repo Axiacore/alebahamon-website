@@ -2365,9 +2365,6 @@ a {
 }
 
 .messages {
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
   min-height: 70vh;
   padding: 4.2rem 0rem;
 }
@@ -2701,6 +2698,12 @@ a {
   transition: opacity 0.35s ease;
   z-index: 2;
 }
+.gallery__item_margin-bottom-30 {
+  margin-bottom: 30px;
+}
+.gallery__item_full-height {
+  height: 100%;
+}
 .gallery__icon {
   position: absolute;
   top: 50%;
@@ -2734,18 +2737,14 @@ a {
 }
 .gallery__img {
   width: 100%;
-  height: auto;
   display: block;
   transition: transform 0.5s ease;
 }
-.gallery .column {
+.gallery .column:nth-child(3) {
   display: none;
 }
-.gallery .column:nth-child(1), .gallery .column:nth-child(2), .gallery .column:nth-child(3) {
-  display: block;
-}
 @media only screen and (min-width: 768px) {
-  .gallery .column {
+  .gallery .column:nth-child(3) {
     display: block;
   }
 }
@@ -2785,10 +2784,12 @@ a {
 
 .about {
   padding: 5.6rem 0rem;
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
   .about {
     padding: 10.5rem 0rem 7.5rem;
+    text-align: left;
   }
 }
 .about__img {
@@ -2935,7 +2936,6 @@ a {
 }
 .ring-item__img-container {
   margin: 0 auto;
-  max-width: 370px;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
@@ -2944,7 +2944,7 @@ a {
   }
 }
 .ring-item__text {
-  margin-top: 4.2rem;
+  margin-top: 2.1rem;
 }
 @media only screen and (min-width: 768px) {
   .ring-item__text {
