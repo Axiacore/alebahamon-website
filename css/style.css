@@ -2881,7 +2881,7 @@ a {
 .transform__img-container {
   display: none;
   margin: 0 auto;
-  max-width: 370px;
+  max-width: 245px;
   position: -webkit-sticky;
   position: sticky;
   top: 50%;
@@ -2892,6 +2892,11 @@ a {
   .transform__img-container {
     display: block;
     margin: 3.75rem 0rem;
+  }
+}
+@media only screen and (min-width: 994px) {
+  .transform__img-container {
+    max-width: 370px;
   }
 }
 .transform__img-item {
@@ -2910,13 +2915,11 @@ a {
 .ring-item {
   padding: 2.1rem 0rem 2.1rem 2.8rem;
   position: relative;
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
   .ring-item {
     padding: 5.25rem 0rem;
-  }
-  .ring-item:nth-child(odd) .ring-item__text {
-    text-align: right;
   }
 }
 .ring-item:first-child {

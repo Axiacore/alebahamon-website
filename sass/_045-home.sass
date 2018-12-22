@@ -343,7 +343,7 @@
     &-container
       display: none
       margin: 0 auto
-      max-width: 370px
+      max-width: 245px
       position: -webkit-sticky // sass-lint:disable-line no-vendor-prefixes
       position: sticky // sass-lint:disable-line no-duplicate-properties
       top: 50%
@@ -353,6 +353,9 @@
       @include breakpoint($tablet)
         display: block
         margin: dms-rem(2.5 0, $tablet)
+
+      @include breakpoint($desktop)
+        max-width: 370px
 
     &-item
       @include position(absolute, 0 null null 0)
@@ -367,13 +370,10 @@
 .ring-item
   padding: dms-rem(1.5 0 1.5 2)
   position: relative
+  text-align: center
 
   @include breakpoint($tablet)
     padding: dms-rem(3.5 0, $tablet)
-
-    &:nth-child(odd)
-      .ring-item__text
-        text-align: right
 
   &:first-child
     padding-top: 0
