@@ -55,18 +55,16 @@
       margin: 0 0 0 calc(#{dms-rem(2, $tablet)} * -1)
       padding: dms-rem(2, $tablet)
       text-align: left
-      width: column-distance(7)
+      width: column-distance(6.5)
 
   &__title
-    @extend %f-mobile-p-3
+    @extend %f-mobile-p-2
     margin-bottom: dms-rem(.75)
+    text-transform: uppercase
 
     @include breakpoint($tablet)
-      @extend %f-tablet-p-4
+      @extend %f-tablet-p-2
       margin-bottom: dms-rem(.75, $tablet)
-
-    @include breakpoint($widescreen)
-      width: 80%
 
   &__text
     margin-bottom: dms-rem(2, $tablet)
@@ -89,11 +87,11 @@
   &__title
     @extend %f-mobile-p-4
     color: $green-primary
-    margin-bottom: dms-rem(1)
+    margin: dms-rem(.25 0 1)
 
     @include breakpoint($tablet)
       @extend %f-tablet-p-4
-      margin-bottom: dms-rem(1, $tablet)
+      margin: dms-rem(.25 0 1, $tablet)
 
   &__gallery
     margin: dms-rem(2 auto 0)
@@ -315,6 +313,7 @@
         margin-right: dms-px(.5, $tablet)
 
     &-container
+      display: none
       margin-bottom: dms-rem(5)
       position: -webkit-sticky // sass-lint:disable-line no-vendor-prefixes
       position: sticky // sass-lint:disable-line no-duplicate-properties
@@ -322,6 +321,7 @@
       width: 100%
 
       @include breakpoint($tablet)
+        display: block
         margin-bottom: dms-rem(3, $tablet)
         top: dms-rem(1, $tablet)
 
@@ -365,7 +365,7 @@
         visibility: visible
 
 .ring-item
-  padding: dms-rem(1.5 0 1.5 2)
+  padding: dms-rem(1.5 0)
   position: relative
   text-align: center
 
