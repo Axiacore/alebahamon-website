@@ -238,23 +238,27 @@
   width: 100%;
 }
 
-[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], input:not([type]), select, textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], input:not([type]), select, textarea,
+.file-field {
+  width: 100%;
+  height: 42px;
   background-color: #fff;
   border: 1px solid #979797;
   border-radius: 0;
   color: #333;
-  display: block;
   font-size: 16px;
   font-weight: 400;
-  height: 42px;
+  transition: border 0.4s ease-in-out;
+}
+
+[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], input:not([type]), select, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
   margin: 0;
   outline: none;
   padding: 0 12px;
-  transition: border 0.4s ease-in-out;
-  width: 100%;
 }
 [type=color]:hover:not([disabled]):not([readonly]), [type=date]:hover:not([disabled]):not([readonly]), [type=datetime]:hover:not([disabled]):not([readonly]), [type=datetime-local]:hover:not([disabled]):not([readonly]), [type=email]:hover:not([disabled]):not([readonly]), [type=month]:hover:not([disabled]):not([readonly]), [type=number]:hover:not([disabled]):not([readonly]), [type=password]:hover:not([disabled]):not([readonly]), [type=search]:hover:not([disabled]):not([readonly]), [type=tel]:hover:not([disabled]):not([readonly]), [type=text]:hover:not([disabled]):not([readonly]), [type=time]:hover:not([disabled]):not([readonly]), [type=url]:hover:not([disabled]):not([readonly]), [type=week]:hover:not([disabled]):not([readonly]), input:not([type]):hover:not([disabled]):not([readonly]), select:hover:not([disabled]):not([readonly]), textarea:hover:not([disabled]):not([readonly]) {
   background-color: #fff;
@@ -392,59 +396,168 @@ select::-ms-expand {
   transform: translateY(-50%);
 }
 
+.check-field,
 .radio-field {
   align-items: center;
+  display: inline-flex;
+  position: relative;
+  vertical-align: top;
+}
+.check-field__input,
+.radio-field__input {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.check-field__input:checked + .check-field__icon, .check-field__input:checked + .radio-field__icon,
+.radio-field__input:checked + .check-field__icon,
+.radio-field__input:checked + .radio-field__icon {
+  border-color: #000;
+}
+.check-field__input:checked + .check-field__icon::after, .check-field__input:checked + .radio-field__icon::after,
+.radio-field__input:checked + .check-field__icon::after,
+.radio-field__input:checked + .radio-field__icon::after {
+  opacity: 1;
+}
+.check-field__icon,
+.radio-field__icon {
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  border: 1px solid #000;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  margin-right: 5px;
+}
+.check-field__icon::after,
+.radio-field__icon::after {
+  content: "";
+  display: block;
+  opacity: 0;
+}
+.check-field__label,
+.radio-field__label {
+  flex-grow: 1;
+  font-size: 16px;
+  line-height: 1em;
+}
+.check-field_icon-right .check-field__icon,
+.check-field_icon-right .radio-field__icon,
+.radio-field_icon-right .check-field__icon,
+.radio-field_icon-right .radio-field__icon {
+  margin-left: 5px;
+  margin-right: 0;
+  order: 1;
+}
+.check-field_icon-right .check-field__label,
+.check-field_icon-right .radio-field__label,
+.radio-field_icon-right .check-field__label,
+.radio-field_icon-right .radio-field__label {
+  order: 0;
+}
+.check-field_box,
+.radio-field_box {
   background-color: #fff;
   border: 1px solid #979797;
   border-radius: 0;
   display: flex;
   height: 42px;
   padding: 0 12px;
-  position: relative;
   transition: border 0.4s ease-in-out;
 }
-.radio-field:hover:not([disabled]):not([readonly]) {
+.check-field_box.check-field_readonly, .check-field_box.radio-field_readonly,
+.radio-field_box.check-field_readonly,
+.radio-field_box.radio-field_readonly {
+  background-color: #fff;
+}
+.check-field_disabled,
+.radio-field_disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.check-field_readonly,
+.radio-field_readonly {
+  cursor: not-allowed;
+}
+
+.check-field__icon::after {
+  width: 10px;
+  height: 6px;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+  margin-top: -3px;
+  transform: rotate(-45deg);
+}
+.check-field_box:hover:not(.check-field_disabled):not(.check-field_readonly) {
   background-color: #fff;
   border-color: #1a3e39;
 }
+
 .radio-field__icon {
-  width: 18px;
-  height: 18px;
-  align-items: center;
-  border: 1px solid #000;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
 }
 .radio-field__icon::after {
   width: 8px;
   height: 8px;
   background-color: #000;
   border-radius: 50%;
-  content: "";
-  display: block;
-  opacity: 0;
 }
-.radio-field__input {
+.radio-field_box:hover:not(.radio-field_disabled):not(.radio-field_readonly) {
+  background-color: #fff;
+  border-color: #1a3e39;
+}
+
+.file-field {
+  align-items: center;
+  display: flex;
+  padding-left: 12px;
+  position: relative;
+}
+.file-field__input {
   position: absolute;
   top: 50%;
-  left: 15px;
+  left: 0;
   opacity: 0;
   transform: translateY(-50%);
+  width: 100%;
+  z-index: -1;
 }
-.radio-field__input:checked + .radio-field__icon {
-  border-color: #000;
-}
-.radio-field__input:checked + .radio-field__icon::after {
-  opacity: 1;
-}
-.radio-field__label {
-  flex-basis: 0;
+.file-field__label {
+  display: block;
   flex-grow: 1;
-  flex-shrink: 1;
-  font-size: 16px;
-  line-height: 1em;
-  padding-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.file-field__icon {
+  align-items: center;
+  background: #979797;
+  border-left: 1px solid #979797;
+  display: flex;
+  flex-shrink: 0;
+  height: 100%;
+  margin-left: 12px;
+  padding: 0 12px;
+  transition: border 0.4s ease-in-out;
+}
+.file-field:hover:not(.file-field_disabled):not(.file-field_readonly) {
+  background-color: #fff;
+  border-color: #1a3e39;
+}
+.file-field:hover:not(.file-field_disabled):not(.file-field_readonly) .file-field__icon {
+  border-left-color: #1a3e39;
+}
+.file-field_disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.file-field_readonly {
+  background-color: #fff;
+  cursor: not-allowed;
 }
 
 .icon {
