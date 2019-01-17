@@ -1420,12 +1420,14 @@ select::-ms-expand {
 .btn_green:hover:not(:disabled) {
   background-color: #29625a;
 }
-.btn_green.btn_outline {
+.btn_outline {
   background: transparent;
+}
+.btn_outline.btn_green {
   border-color: #1a3e39;
   color: #1a3e39;
 }
-.btn_green.btn_outline:hover:not(:disabled) {
+.btn_outline.btn_green:hover:not(:disabled) {
   background-color: #1a3e39;
   color: #fff;
 }
